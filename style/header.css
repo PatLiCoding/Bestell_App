@@ -1,0 +1,37 @@
+.headerMaxWidht {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 0;
+  font-family: "Raleway", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: yellow;
+  border-bottom: 1px solid gray;
+}
+
+.headerLogo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.headerStyleLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: black;
+}
+
+.headerStyleLogo:hover {
+  filter: drop-shadow(5px 5px 5px rgb(242, 100, 242));
+}
