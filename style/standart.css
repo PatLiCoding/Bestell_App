@@ -35,9 +35,13 @@ a {
 }
 
 h1 {
-  font-size: 48px;
   font-weight: 700;
   font-family: "Raleway", Arial;
+}
+
+h3 {
+  text-align: center;
+  width: 300px;
 }
 
 h2:hover {
