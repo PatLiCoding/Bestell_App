@@ -18,10 +18,11 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: yellow;
+  background-color: orange;
   border-top: 1px solid gray;
+  color: white;
 }
 
-footer img{
-    height: 20px;
+footer img {
+  height: 20px;
 }

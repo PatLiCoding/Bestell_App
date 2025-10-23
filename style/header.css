@@ -14,24 +14,16 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: yellow;
+  background-color: orange;
   border-bottom: 1px solid gray;
 }
 
 .headerLogo {
-  width: 60px;
   height: 60px;
   object-fit: cover;
 }
 
-.headerStyleLogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  color: black;
-}
-
-.headerStyleLogo:hover {
+.headerLogo:hover {
   filter: drop-shadow(5px 5px 5px rgb(242, 100, 242));
+  cursor: pointer;
 }
