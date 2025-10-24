@@ -1,15 +1,20 @@
-#cartContainer {
-  position: sticky;
-  z-index: 1;
-  right: 0;
+#cart {
   flex-grow: 1;
   border-left: 1px solid gray;
+  border-right: 1px solid gray;
   background-color: white;
+}
+
+.cartContainer {
+  position: sticky;
+  max-height: 100vh;
+  z-index: 1;
+  top: 0;
+  padding-top: 40px;
 }
 
 .cartHeadline {
   text-align: center;
   width: 300px;
-  color: blue;
-  margin-top: 24px;
+  color: rgb(9, 119, 209);
 }
