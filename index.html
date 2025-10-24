@@ -37,6 +37,37 @@
         <div id="cart">
           <div class="cartContainer">
             <h2 class="cartHeadline">Warenkorb</h2>
+            <div class="cartAddDishesContainer">
+              <h3>Gericht</h3>
+              <div class="cartAddDishesNav">
+                <div class="cartAddRemoveSection">
+                  <img
+                    class="cartBtn"
+                    src="./assets/icon/add.png"
+                    alt="Hinzufügen Button"
+                  />
+                  <span>Anzahl</span>
+                  <img
+                    class="cartBtn"
+                    src="./assets/icon/remove.png"
+                    alt="Entfernen Button"
+                  />
+                </div>
+                <span>Summe €</span>
+                <img
+                  class="cartBtn"
+                  src="./assets/icon/delete.png"
+                  alt="Aus dem Warenkorb entfernen Button"
+                />
+              </div>
+            </div>
+            <ul class="sumList">
+              <li><span>Zwischensumme:</span><span id="amountSum"> €</span></li>
+              <li><span>Lieferkosten:</span><span>5,00 €</span></li>
+              <li class="resultBold">
+                <span>Gesamt:</span><span id="resultSum"> €</span>
+              </li>
+            </ul>
           </div>
         </div>
 

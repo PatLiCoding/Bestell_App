@@ -11,10 +11,61 @@
   z-index: 1;
   top: 0;
   padding-top: 40px;
+  width: 300px;
 }
 
 .cartHeadline {
   text-align: center;
-  width: 300px;
-  color: rgb(9, 119, 209);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.cartAddDishesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  gap: 8px;
+}
+
+.cartAddDishesNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartAddRemoveSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartBtn {
+  height: 28px;
+  width: 28px;
+  object-fit: cover;
+  padding: 2px;
+}
+
+.cartBtn:hover {
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 50px;
+}
+
+.sumList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 16px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.sumList li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.resultBold {
+  font-weight: 700;
 }
