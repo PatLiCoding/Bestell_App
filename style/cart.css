@@ -6,3 +6,10 @@
   border-left: 1px solid gray;
   background-color: white;
 }
+
+.cartHeadline {
+  text-align: center;
+  width: 300px;
+  color: blue;
+  margin-top: 24px;
+}

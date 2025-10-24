@@ -1,7 +1,7 @@
 let dishes = [
   {
     name: "Gebratene Nudeln mit Hähnchen",
-    zutaten: [
+    ingredient: [
       "Eiernudeln",
       "Hähnchenbrust",
       "Sojasoße",
@@ -10,11 +10,11 @@ let dishes = [
       "Zwiebeln",
       "Sesamöl",
     ],
-    preis: 9.5,
+    price: 9.5,
   },
   {
     name: "Rotes Thai-Curry mit Gemüse",
-    zutaten: [
+    ingredient: [
       "Kokosmilch",
       "rote Currypaste",
       "Zucchini",
@@ -23,11 +23,11 @@ let dishes = [
       "Bambussprossen",
       "Jasminreis",
     ],
-    preis: 10.2,
+    price: 10.2,
   },
   {
     name: "Sushi-Set Maki Mix",
-    zutaten: [
+    ingredient: [
       "Lachs",
       "Gurke",
       "Avocado",
@@ -37,11 +37,11 @@ let dishes = [
       "Sojasoße",
       "Wasabi",
     ],
-    preis: 12.8,
+    price: 12.8,
   },
   {
     name: "Gebratener Reis mit Ei und Gemüse",
-    zutaten: [
+    ingredient: [
       "Reis",
       "Ei",
       "Erbsen",
@@ -50,11 +50,11 @@ let dishes = [
       "Sesamöl",
       "Frühlingszwiebeln",
     ],
-    preis: 8.9,
+    price: 8.9,
   },
   {
     name: "Gemüse-Curry mit Kokosmilch",
-    zutaten: [
+    ingredient: [
       "Süßkartoffeln",
       "Zucchini",
       "Karotten",
@@ -63,11 +63,11 @@ let dishes = [
       "Reis",
       "Koriander",
     ],
-    preis: 8.7,
+    price: 8.7,
   },
   {
     name: "Rindfleisch mit schwarzer Pfeffersoße",
-    zutaten: [
+    ingredient: [
       "Rindfleisch",
       "Sojasoße",
       "Austernsoße",
@@ -76,6 +76,6 @@ let dishes = [
       "Knoblauch",
       "Jasminreis",
     ],
-    preis: 11.5,
+    price: 11.5,
   },
 ];

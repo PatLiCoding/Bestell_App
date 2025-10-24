@@ -23,7 +23,7 @@
     <script src="./script/templates.js" defer></script>
     <script src="./script/script.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <section class="headerMaxWidht">
         <a href="./index.html">
@@ -35,7 +35,7 @@
     <main>
       <section class="mainMaxWidht">
         <div id="cartContainer">
-          <h3>Warenkorb</h3>
+          <h3 class="cartHeadline">Warenkorb</h3>
         </div>
 
         <div id="mainContent">
@@ -51,6 +51,21 @@
               src="./assets/img/bowl.png"
               alt="Reis Bowl"
             />
+            <p class="valuation">Bewertung (3,7 / 5 Sternen)</p>
+            <nav class="dishesCategories">
+              <a class="dishesCategoriesLink" href="#mainDishesContent"
+                >Hauptgerichte</a
+              >
+            </nav>
+            <img
+              class="headlineImageMeal"
+              src="./assets/img/sushi.jpg"
+              alt="Sushirolle"
+            />
+          </div>
+          <div id="mainDishesContent" class="mainDishesContent">
+            <h2 class="maindishesHeadline">Hauptgerichte:</h2>
+            <div id="mainDishesContainer" class="mainDishesContainer"></div>
           </div>
         </div>
       </section>
