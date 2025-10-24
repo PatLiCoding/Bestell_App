@@ -102,6 +102,7 @@ main {
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-top-right-radius: 15px;
+  transition: all 125ms ease-in;
 }
 
 .dishesBoxAddBtn:hover {
@@ -118,4 +119,44 @@ main {
 .dishesBoxPrice {
   color: orange;
   font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .headlineImage {
+    right: 30%;
+  }
+}
+
+@media (max-width: 850px) {
+  .headlineImage {
+    right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headlineImage {
+    right: 40%;
+  }
+}
+
+@media (max-width: 680px) {
+  .headlineImage {
+    right: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .headlineImage {
+    right: 20%;
+  }
+}
+
+@media (max-width: 460px) {
+  .headlineImage {
+    right: 40%;
+  }
+
+  h1 {
+    margin-top: 60px;
+  }
 }

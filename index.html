@@ -37,29 +37,10 @@
         <div id="cart">
           <div class="cartContainer">
             <h2 class="cartHeadline">Warenkorb</h2>
-            <div class="cartAddDishesContainer">
-              <h3>Gericht</h3>
-              <div class="cartAddDishesNav">
-                <div class="cartAddRemoveSection">
-                  <img
-                    class="cartBtn"
-                    src="./assets/icon/add.png"
-                    alt="Hinzufügen Button"
-                  />
-                  <span>Anzahl</span>
-                  <img
-                    class="cartBtn"
-                    src="./assets/icon/remove.png"
-                    alt="Entfernen Button"
-                  />
-                </div>
-                <span>Summe €</span>
-                <img
-                  class="cartBtn"
-                  src="./assets/icon/delete.png"
-                  alt="Aus dem Warenkorb entfernen Button"
-                />
-              </div>
+            <div id="cartAddDishesContainer" class="cartAddDishesContainer">
+              <p class="cartPlaceholderText">
+                Noch würde nichts den Warenkorb hinzugefügt.
+              </p>
             </div>
             <ul class="sumList">
               <li><span>Zwischensumme:</span><span id="amountSum"> €</span></li>
@@ -110,5 +91,8 @@
         <p>copyright 2025 - Bestell App</p>
       </section>
     </footer>
+    <div class="cartBtnOpenSection">
+      <button class="cartBtnOpen">Warenkorb öffnen</button>
+    </div>
   </body>
 </html>

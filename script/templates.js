@@ -16,3 +16,31 @@ function getTemplateMainDishes(i) {
                  €</p>
               </div>`;
 }
+
+function getTemplateCart(i) {
+  document.getElementById("cartAddDishesContainer").innerHTML +=
+    /*HTML*/
+    `<h3>Gericht</h3>
+        <div class="cartAddDishesNav">
+        <div class="cartAddRemoveSection">
+            <img
+            class="cartBtn"
+            src="./assets/icon/add.png"
+            alt="Hinzufügen Button"
+            />
+            <span>Anzahl</span>
+            <img
+            class="cartBtn"
+            src="./assets/icon/remove.png"
+            alt="Entfernen Button"
+            />
+        </div>
+        <span>Summe €</span>
+        <img
+            class="cartBtn"
+            src="./assets/icon/delete.png"
+            alt="Aus dem Warenkorb entfernen Button"
+        />
+        </div>
+        `;
+}

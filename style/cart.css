@@ -1,3 +1,4 @@
+/*Cart by 4K until tablet*/
 #cart {
   flex-grow: 1;
   border-left: 1px solid gray;
@@ -27,6 +28,12 @@
   gap: 8px;
 }
 
+.cartPlaceholderText {
+  color: gray;
+  font-weight: 700;
+  text-align: center;
+}
+
 .cartAddDishesNav {
   display: flex;
   justify-content: space-between;
@@ -44,6 +51,7 @@
   width: 28px;
   object-fit: cover;
   padding: 2px;
+  transition: all 125ms ease-in;
 }
 
 .cartBtn:hover {
@@ -68,4 +76,39 @@
 
 .resultBold {
   font-weight: 700;
+}
+
+.cartBtnOpenSection {
+  display: none;
+}
+
+/*Cart by tablet until Handy*/
+@media (max-width: 768px) {
+  #cart {
+    display: none;
+  }
+
+  .cartBtnOpenSection {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .cartBtnOpen {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(0, 191, 255);
+    transition: all 125ms ease-in;
+  }
+
+  .cartBtnOpen:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+  }
 }
