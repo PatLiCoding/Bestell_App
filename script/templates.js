@@ -6,6 +6,7 @@ function getTemplateMainDishes(i) {
                   class="dishesBoxAddBtn"
                   src="./assets/icon/add.png"
                   alt="Hinzufügen Button"
+                  onclick="addDishesToCart(${i})"
                 />
                 <h3 class="dishesBoxHeadline">${dishes[i].name}</h3>
                 <p>${dishes[i].ingredient.join(", ")}
@@ -15,6 +16,17 @@ function getTemplateMainDishes(i) {
                   .replace(".", ",")}
                  €</p>
               </div>`;
+}
+
+function getTemplateCartPlaceholder() {
+  smallCartRef.innerHTML = /*HTML*/ `                
+              <p id="bigCartPlaceholderText" class="cartPlaceholderText">
+                Noch wurde nichts den Warenkorb hinzugefügt.
+              </p>`;
+  bigCartRef.innerHTML = /*HTML*/ `                
+              <p id="bigCartPlaceholderText" class="cartPlaceholderText">
+                Noch wurde nichts den Warenkorb hinzugefügt.
+              </p>`;
 }
 
 function getTemplateBigCart(i) {

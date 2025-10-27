@@ -41,15 +41,19 @@
         >
           <div id="diaContent" onclick="stopPropagation(event)">
             <h2 id="dialogTitle" class="cartHeadline">Warenkorb</h2>
+            <img
+              src="./assets/icon/close.png"
+              alt="Schließen Button"
+              onclick="closeCart()"
+              class="cartCloseBtn"
+              aria-label="Dialog close"
+              tabindex="0"
+            />
             <div
               id="smallCartAddDishesContainer"
               class="cartAddDishesContainer"
-            >
-              <p class="cartPlaceholderText">
-                Noch wurde nichts den Warenkorb hinzugefügt.
-              </p>
-            </div>
-            <ul class="sumList">
+            ></div>
+            <ul class="smallCartsumList">
               <li>
                 <span>Zwischensumme:</span
                 ><span id="smallCartamountSum"> €</span>
@@ -59,13 +63,8 @@
                 <span>Gesamt:</span><span id="smallCartresultSum"> €</span>
               </li>
             </ul>
-            <button
-              aria-label="Dialog close"
-              tabindex="0"
-              onclick="closeCart()"
-              class="closeDiaBtn"
-            >
-              Warenkorb schließen
+            <button tabindex="0" onclick="" class="orderDiaBtn">
+              Bestellen
             </button>
           </div>
         </dialog>
@@ -73,12 +72,11 @@
         <div id="cart">
           <div class="cartContainer">
             <h2 class="cartHeadline">Warenkorb</h2>
-            <div id="bigCartAddDishesContainer" class="cartAddDishesContainer">
-              <p class="cartPlaceholderText">
-                Noch wurde nichts den Warenkorb hinzugefügt.
-              </p>
-            </div>
-            <ul class="sumList">
+            <div
+              id="bigCartAddDishesContainer"
+              class="cartAddDishesContainer"
+            ></div>
+            <ul class="bigCartsumList">
               <li>
                 <span>Zwischensumme:</span><span id="bigCartamountSum"> €</span>
               </li>
@@ -87,6 +85,9 @@
                 <span>Gesamt:</span><span id="bigCartresultSum"> €</span>
               </li>
             </ul>
+            <button tabindex="0" onclick="" class="orderBigCartBtn">
+              Bestellen
+            </button>
           </div>
         </div>
 

@@ -1,19 +1,38 @@
 const dialogRef = document.getElementById("dia");
-let amountSum = 0;
-let resultSum = 0;
+let smallCartRef = document.getElementById("smallCartAddDishesContainer");
+let bigCartRef = document.getElementById("bigCartAddDishesContainer");
+let cart = [
+  {
+    dishes: [],
+    price: [],
+    mealAmount: [],
+    amountSum: 0,
+    deliveryCosts: 5,
+    resultSum: 0,
+  },
+];
 
 function init() {
   for (let i = 0; i < dishes.length; i++) {
     getTemplateMainDishes(i);
   }
   renderCart();
+  getTemplateCartPlaceholder();
 }
 
 function renderCart() {
-  document.getElementById("bigCartamountSum").innerHTML = `${amountSum} €`;
-  document.getElementById("bigCartresultSum").innerHTML = `${resultSum} €`;
-  document.getElementById("smallCartamountSum").innerHTML = `${amountSum} €`;
-  document.getElementById("smallCartresultSum").innerHTML = `${resultSum} €`;
+  document.getElementById(
+    "bigCartamountSum"
+  ).innerHTML = `${cart[0].amountSum} €`;
+  document.getElementById(
+    "bigCartresultSum"
+  ).innerHTML = `${cart[0].resultSum} €`;
+  document.getElementById(
+    "smallCartamountSum"
+  ).innerHTML = `${cart[0].amountSum} €`;
+  document.getElementById(
+    "smallCartresultSum"
+  ).innerHTML = `${cart[0].resultSum} €`;
 }
 
 function openCart() {
@@ -46,4 +65,12 @@ function hiddenBody() {
 
 function showBody() {
   document.body.style.overflow = "";
+}
+
+function addDishesToCart(i) {
+  bigCartRef = "";
+  smallCartRef = "";
+
+  bigCartRef = getTemplateBigCart(i);
+  smallCartRef = getTemplateSmallCart(i);
 }
