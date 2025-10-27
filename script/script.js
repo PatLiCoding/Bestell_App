@@ -50,6 +50,7 @@ function openCart() {
   hiddenBody();
   dialogRef.classList.add("opened");
   renderCart();
+  renderCartDishesList();
 }
 
 function closeCart() {
@@ -57,6 +58,7 @@ function closeCart() {
   showBody();
   dialogRef.classList.remove("opened");
   renderCart();
+  renderCartDishesList();
 }
 
 function eventBubbling(event) {
@@ -103,4 +105,16 @@ function setAddCart(i) {
   renderCartDishesList();
 }
 
-function setRemoveCart() {}
+function setOneRemoveCart(i) {
+  let menuIndex = cart[0].mealAmount[i];
+
+  if (cart[0].mealAmount[menuIndex] > 0) {
+    cart[0].mealAmount[menuIndex]--;
+    cart[0].price[menuIndex] = cart[0].price[menuIndex] - dishes[i].dishesPrice;
+  } else {
+    cart[0].meal.splice(menuIndex, 1);
+    cart[0].price.splice(menuIndex, 1);
+    cart[0].mealAmount.splice(menuIndex, 1);
+  }
+  renderCartDishesList();
+}

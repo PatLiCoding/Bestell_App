@@ -46,6 +46,7 @@ function getTemplateBigCart(i) {
             class="cartBtn"
             src="./assets/icon/remove.png"
             alt="Entfernen Button"
+            onclick="setOneRemoveCart(${i})"
             />
         </div>
         <span>${cart[0].price[i].toFixed(2).replace(".", ",")} €</span>
@@ -59,7 +60,7 @@ function getTemplateBigCart(i) {
 }
 
 function getTemplateSmallCart(i) {
-  document.getElementById("smallCartAddDishesContainer").innerHTML.innerHTML +=
+  document.getElementById("smallCartAddDishesContainer").innerHTML +=
     /*HTML*/
     `<h5>${dishes[i].name}</h5>
         <div class="cartAddDishesNav">
@@ -75,6 +76,7 @@ function getTemplateSmallCart(i) {
             class="cartBtn"
             src="./assets/icon/remove.png"
             alt="Entfernen Button"
+            onclick="setOneRemoveCart(${i})"
             />
         </div>
         <span>${cart[0].price[i].toFixed(2).replace(".", ",")} €</span>
