@@ -19,11 +19,11 @@ function getTemplateMainDishes(i) {
 }
 
 function getTemplateCartPlaceholder() {
-  smallCartRef.innerHTML = /*HTML*/ `                
+  smallCartPlaceholder.innerHTML += /*HTML*/ `                
               <p id="bigCartPlaceholderText" class="cartPlaceholderText">
                 Noch wurde nichts den Warenkorb hinzugefügt.
               </p>`;
-  bigCartRef.innerHTML = /*HTML*/ `                
+  bigCartPlaceholder.innerHTML += /*HTML*/ `                
               <p id="bigCartPlaceholderText" class="cartPlaceholderText">
                 Noch wurde nichts den Warenkorb hinzugefügt.
               </p>`;
@@ -32,7 +32,7 @@ function getTemplateCartPlaceholder() {
 function getTemplateBigCart(i) {
   document.getElementById("bigCartAddDishesContainer").innerHTML +=
     /*HTML*/
-    `<h3>Gericht</h3>
+    `<h5>${dishes[i].name}</h5>
         <div class="cartAddDishesNav">
         <div class="cartAddRemoveSection">
             <img
@@ -58,9 +58,9 @@ function getTemplateBigCart(i) {
 }
 
 function getTemplateSmallCart(i) {
-  document.getElementById("smallCartAddDishesContainer").innerHTML +=
+  document.getElementById("smallCartAddDishesContainer").innerHTML.innerHTML +=
     /*HTML*/
-    `<h3>Gericht</h3>
+    `<h5>${dishes[i].name}</h5>
         <div class="cartAddDishesNav">
         <div class="cartAddRemoveSection">
             <img

@@ -1,6 +1,6 @@
 const dialogRef = document.getElementById("dia");
-let smallCartRef = document.getElementById("smallCartAddDishesContainer");
-let bigCartRef = document.getElementById("bigCartAddDishesContainer");
+let smallCartPlaceholder = document.getElementById("smallCartPlaceholder");
+let bigCartPlaceholder = document.getElementById("bigCartPlaceholder");
 let cart = [
   {
     dishes: [],
@@ -68,9 +68,9 @@ function showBody() {
 }
 
 function addDishesToCart(i) {
-  bigCartRef = "";
-  smallCartRef = "";
+  bigCartPlaceholder.innerHTML = "";
+  smallCartPlaceholder.innerHTML = "";
 
-  bigCartRef = getTemplateBigCart(i);
-  smallCartRef = getTemplateSmallCart(i);
+  getTemplateBigCart(i);
+  getTemplateSmallCart(i);
 }
