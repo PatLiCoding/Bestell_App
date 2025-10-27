@@ -21,7 +21,7 @@
     <!--script-->
     <script src="./script/dishes.js" defer></script>
     <script src="./script/templates.js" defer></script>
-    <script src="./script/script.js"></script>
+    <script src="./script/script.js" defer></script>
   </head>
   <body onload="init()">
     <header>
@@ -34,19 +34,57 @@
 
     <main>
       <section class="mainMaxWidht">
-        <div id="cart">
-          <div class="cartContainer">
-            <h2 class="cartHeadline">Warenkorb</h2>
-            <div id="cartAddDishesContainer" class="cartAddDishesContainer">
+        <dialog
+          id="dia"
+          aria-labelledby="dialogTitle"
+          onclick="eventBubbling(event)"
+        >
+          <div id="diaContent" onclick="stopPropagation(event)">
+            <h2 id="dialogTitle" class="cartHeadline">Warenkorb</h2>
+            <div
+              id="smallCartAddDishesContainer"
+              class="cartAddDishesContainer"
+            >
               <p class="cartPlaceholderText">
-                Noch würde nichts den Warenkorb hinzugefügt.
+                Noch wurde nichts den Warenkorb hinzugefügt.
               </p>
             </div>
             <ul class="sumList">
-              <li><span>Zwischensumme:</span><span id="amountSum"> €</span></li>
+              <li>
+                <span>Zwischensumme:</span
+                ><span id="smallCartamountSum"> €</span>
+              </li>
               <li><span>Lieferkosten:</span><span>5,00 €</span></li>
               <li class="resultBold">
-                <span>Gesamt:</span><span id="resultSum"> €</span>
+                <span>Gesamt:</span><span id="smallCartresultSum"> €</span>
+              </li>
+            </ul>
+            <button
+              aria-label="Dialog close"
+              tabindex="0"
+              onclick="closeCart()"
+              class="closeDiaBtn"
+            >
+              Warenkorb schließen
+            </button>
+          </div>
+        </dialog>
+
+        <div id="cart">
+          <div class="cartContainer">
+            <h2 class="cartHeadline">Warenkorb</h2>
+            <div id="bigCartAddDishesContainer" class="cartAddDishesContainer">
+              <p class="cartPlaceholderText">
+                Noch wurde nichts den Warenkorb hinzugefügt.
+              </p>
+            </div>
+            <ul class="sumList">
+              <li>
+                <span>Zwischensumme:</span><span id="bigCartamountSum"> €</span>
+              </li>
+              <li><span>Lieferkosten:</span><span>5,00 €</span></li>
+              <li class="resultBold">
+                <span>Gesamt:</span><span id="bigCartresultSum"> €</span>
               </li>
             </ul>
           </div>
@@ -92,7 +130,7 @@
       </section>
     </footer>
     <div class="cartBtnOpenSection">
-      <button class="cartBtnOpen">Warenkorb öffnen</button>
+      <button class="cartBtnOpen" onclick="openCart()">Warenkorb öffnen</button>
     </div>
   </body>
 </html>
