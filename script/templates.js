@@ -11,7 +11,7 @@ function getTemplateMainDishes(i) {
                 <h3 class="dishesBoxHeadline">${dishes[i].name}</h3>
                 <p>${dishes[i].ingredient.join(", ")}
                 </p>
-                <p class="dishesBoxPrice">${dishes[i].price
+                <p class="dishesBoxPrice">${dishes[i].dishesPrice
                   .toFixed(2)
                   .replace(".", ",")}
                  €</p>
@@ -39,15 +39,16 @@ function getTemplateBigCart(i) {
             class="cartBtn"
             src="./assets/icon/add.png"
             alt="Hinzufügen Button"
+            onclick="setAddCart(${i})"
             />
-            <span>Anzahl</span>
+            <span>${cart[0].mealAmount[i]}</span>
             <img
             class="cartBtn"
             src="./assets/icon/remove.png"
             alt="Entfernen Button"
             />
         </div>
-        <span>Summe €</span>
+        <span>${cart[0].price[i].toFixed(2).replace(".", ",")} €</span>
         <img
             class="cartBtn"
             src="./assets/icon/delete.png"
@@ -67,15 +68,16 @@ function getTemplateSmallCart(i) {
             class="cartBtn"
             src="./assets/icon/add.png"
             alt="Hinzufügen Button"
+            onclick="setAddCart(${i})"
             />
-            <span>Anzahl</span>
+            <span>${cart[0].mealAmount[i]}</span>
             <img
             class="cartBtn"
             src="./assets/icon/remove.png"
             alt="Entfernen Button"
             />
         </div>
-        <span>Summe €</span>
+        <span>${cart[0].price[i].toFixed(2).replace(".", ",")} €</span>
         <img
             class="cartBtn"
             src="./assets/icon/delete.png"

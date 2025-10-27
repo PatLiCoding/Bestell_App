@@ -3,7 +3,7 @@ let smallCartPlaceholder = document.getElementById("smallCartPlaceholder");
 let bigCartPlaceholder = document.getElementById("bigCartPlaceholder");
 let cart = [
   {
-    dishes: [],
+    meal: [],
     price: [],
     mealAmount: [],
     amountSum: 0,
@@ -33,6 +33,16 @@ function renderCart() {
   document.getElementById(
     "smallCartresultSum"
   ).innerHTML = `${cart[0].resultSum} €`;
+}
+
+function renderCartDishesList() {
+  document.getElementById("bigCartAddDishesContainer").innerHTML = "";
+  document.getElementById("smallCartAddDishesContainer").innerHTML = "";
+
+  for (let i = 0; i < cart[0].meal.length; i++) {
+    getTemplateBigCart(i);
+    getTemplateSmallCart(i);
+  }
 }
 
 function openCart() {
@@ -67,10 +77,30 @@ function showBody() {
   document.body.style.overflow = "";
 }
 
+function getMenuIndex(menu) {
+  let index = cart[0].meal.indexOf(menu);
+  return index;
+}
+
 function addDishesToCart(i) {
   bigCartPlaceholder.innerHTML = "";
   smallCartPlaceholder.innerHTML = "";
 
-  getTemplateBigCart(i);
-  getTemplateSmallCart(i);
+  setAddCart(i);
 }
+
+function setAddCart(i) {
+  let menue = dishes[i].name;
+  let menuIndex = getMenuIndex(menue);
+  if (menuIndex === -1) {
+    cart[0].meal.push(dishes[i].name);
+    cart[0].price.push(dishes[i].dishesPrice);
+    cart[0].mealAmount.push(1);
+  } else {
+    cart[0].mealAmount[menuIndex]++;
+    cart[0].price[menuIndex] = cart[0].price[menuIndex] + dishes[i].dishesPrice;
+  }
+  renderCartDishesList();
+}
+
+function setRemoveCart() {}

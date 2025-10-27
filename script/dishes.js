@@ -10,7 +10,7 @@ let dishes = [
       "Zwiebeln",
       "Sesamöl",
     ],
-    price: 9.5,
+    dishesPrice: 9.5,
   },
   {
     name: "Rotes Thai-Curry mit Gemüse",
@@ -23,7 +23,7 @@ let dishes = [
       "Bambussprossen",
       "Jasminreis",
     ],
-    price: 10.2,
+    dishesPrice: 10.2,
   },
   {
     name: "Sushi-Set Maki Mix",
@@ -37,7 +37,7 @@ let dishes = [
       "Sojasoße",
       "Wasabi",
     ],
-    price: 12.8,
+    dishesPrice: 12.8,
   },
   {
     name: "Gebratener Reis mit Ei und Gemüse",
@@ -50,7 +50,7 @@ let dishes = [
       "Sesamöl",
       "Frühlingszwiebeln",
     ],
-    price: 8.9,
+    dishesPrice: 8.9,
   },
   {
     name: "Gemüse-Curry mit Kokosmilch",
@@ -63,7 +63,7 @@ let dishes = [
       "Reis",
       "Koriander",
     ],
-    price: 8.7,
+    dishesPrice: 8.7,
   },
   {
     name: "Rindfleisch mit schwarzer Pfeffersoße",
@@ -76,6 +76,6 @@ let dishes = [
       "Knoblauch",
       "Jasminreis",
     ],
-    price: 11.5,
+    dishesPrice: 11.5,
   },
 ];
