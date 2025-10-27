@@ -43,6 +43,9 @@ function renderCartDishesList() {
     getTemplateBigCart(i);
     getTemplateSmallCart(i);
   }
+  if (cart[0].meal.length === 0) {
+    getTemplateCartPlaceholder();
+  }
 }
 
 function openCart() {
@@ -106,15 +109,14 @@ function setAddCart(i) {
 }
 
 function setOneRemoveCart(i) {
-  let menuIndex = cart[0].mealAmount[i];
-
-  if (cart[0].mealAmount[menuIndex] > 0) {
-    cart[0].mealAmount[menuIndex]--;
-    cart[0].price[menuIndex] = cart[0].price[menuIndex] - dishes[i].dishesPrice;
-  } else {
-    cart[0].meal.splice(menuIndex, 1);
-    cart[0].price.splice(menuIndex, 1);
-    cart[0].mealAmount.splice(menuIndex, 1);
+  if (cart[0].mealAmount[i] > 0) {
+    cart[0].mealAmount[i]--;
+    cart[0].price[i] = cart[0].price[i] - dishes[i].dishesPrice;
+  }
+  if (cart[0].mealAmount[i] == 0) {
+    cart[0].meal.splice(i, 1);
+    cart[0].price.splice(i, 1);
+    cart[0].mealAmount.splice(i, 1);
   }
   renderCartDishesList();
 }

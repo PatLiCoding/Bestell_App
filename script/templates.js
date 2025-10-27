@@ -19,12 +19,16 @@ function getTemplateMainDishes(i) {
 }
 
 function getTemplateCartPlaceholder() {
-  smallCartPlaceholder.innerHTML += /*HTML*/ `                
-              <p id="bigCartPlaceholderText" class="cartPlaceholderText">
+  document.getElementById(
+    "smallCartAddDishesContainer"
+  ).innerHTML += /*HTML*/ `                
+              <p class="cartPlaceholderText">
                 Noch wurde nichts den Warenkorb hinzugefügt.
               </p>`;
-  bigCartPlaceholder.innerHTML += /*HTML*/ `                
-              <p id="bigCartPlaceholderText" class="cartPlaceholderText">
+  document.getElementById(
+    "bigCartAddDishesContainer"
+  ).innerHTML += /*HTML*/ `                
+              <p class="cartPlaceholderText">
                 Noch wurde nichts den Warenkorb hinzugefügt.
               </p>`;
 }
