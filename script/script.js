@@ -109,8 +109,8 @@ function setAddCart(i) {
     cart[0].price.push(dishes[i].dishesPrice);
     cart[0].mealAmount.push(1);
   } else {
-    cart[0].mealAmount[menuIndex]++;
-    cart[0].price[menuIndex] = cart[0].price[menuIndex] + dishes[i].dishesPrice;
+    cart[0].mealAmount[i]++;
+    cart[0].price[i] = cart[0].price[i] + dishes[menuIndex].dishesPrice;
   }
   renderCartDishesList();
 }
