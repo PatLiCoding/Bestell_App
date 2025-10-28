@@ -58,6 +58,7 @@ function getTemplateBigCart(i) {
             class="cartBtn"
             src="./assets/icon/delete.png"
             alt="Aus dem Warenkorb entfernen Button"
+            onclick="setRemoveDishesFromCart(${i})"
         />
         </div>
         `;
@@ -88,6 +89,7 @@ function getTemplateSmallCart(i) {
             class="cartBtn"
             src="./assets/icon/delete.png"
             alt="Aus dem Warenkorb entfernen Button"
+            onclick="setRemoveDishesFromCart(${i})"
         />
         </div>
         `;

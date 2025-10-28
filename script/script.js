@@ -7,7 +7,7 @@ let cart = [
     price: [],
     mealAmount: [],
     amountSum: 0,
-    deliveryCosts: 5,
+    deliveryCosts: 5.0,
     resultSum: 0,
   },
 ];
@@ -21,6 +21,8 @@ function init() {
 }
 
 function renderCart() {
+  amountSumCalculation();
+  resultSumCalculation();
   document.getElementById(
     "bigCartamountSum"
   ).innerHTML = `${cart[0].amountSum} €`;
@@ -39,13 +41,15 @@ function renderCartDishesList() {
   document.getElementById("bigCartAddDishesContainer").innerHTML = "";
   document.getElementById("smallCartAddDishesContainer").innerHTML = "";
 
-  for (let i = 0; i < cart[0].meal.length; i++) {
-    getTemplateBigCart(i);
-    getTemplateSmallCart(i);
-  }
   if (cart[0].meal.length === 0) {
     getTemplateCartPlaceholder();
+  } else {
+    for (let i = 0; i < cart[0].meal.length; i++) {
+      getTemplateBigCart(i);
+      getTemplateSmallCart(i);
+    }
   }
+  renderCart();
 }
 
 function openCart() {
@@ -112,11 +116,32 @@ function setOneRemoveCart(i) {
   if (cart[0].mealAmount[i] > 0) {
     cart[0].mealAmount[i]--;
     cart[0].price[i] = cart[0].price[i] - dishes[i].dishesPrice;
+    renderCartDishesList();
   }
   if (cart[0].mealAmount[i] == 0) {
-    cart[0].meal.splice(i, 1);
-    cart[0].price.splice(i, 1);
-    cart[0].mealAmount.splice(i, 1);
+    setRemoveDishesFromCart(i);
   }
+}
+
+function setRemoveDishesFromCart(i) {
+  cart[0].meal.splice(i, 1);
+  cart[0].price.splice(i, 1);
+  cart[0].mealAmount.splice(i, 1);
   renderCartDishesList();
+}
+
+function amountSumCalculation() {
+  let sum = 0;
+  for (let i = 0; i < cart[0].price.length; i++) {
+    sum += cart[0].price[i];
+  }
+  cart[0].amountSum = sum.toFixed(2).replace(".", ",");
+}
+
+function resultSumCalculation() {
+  cart[0].resultSum = (
+    Number(cart[0].amountSum.replace(",", ".")) + Number(cart[0].deliveryCosts)
+  )
+    .toFixed(2)
+    .replace(".", ",");
 }
