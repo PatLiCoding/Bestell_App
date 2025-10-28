@@ -36,7 +36,7 @@ function getTemplateCartPlaceholder() {
 function getTemplateBigCart(i) {
   document.getElementById("bigCartAddDishesContainer").innerHTML +=
     /*HTML*/
-    `<h5>${dishes[i].name}</h5>
+    `<h5>${cart[0].meal[i]}</h5>
         <div class="cartAddDishesNav">
         <div class="cartAddRemoveSection">
             <img
@@ -67,7 +67,7 @@ function getTemplateBigCart(i) {
 function getTemplateSmallCart(i) {
   document.getElementById("smallCartAddDishesContainer").innerHTML +=
     /*HTML*/
-    `<h5>${dishes[i].name}</h5>
+    `<h5>${cart[0].meal[i]}</h5>
         <div class="cartAddDishesNav">
         <div class="cartAddRemoveSection">
             <img
