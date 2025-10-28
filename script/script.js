@@ -1,6 +1,7 @@
 const dialogRef = document.getElementById("dia");
 let smallCartPlaceholder = document.getElementById("smallCartPlaceholder");
 let bigCartPlaceholder = document.getElementById("bigCartPlaceholder");
+let cartLocalStorage = [];
 let cart = [
   {
     meal: [],
@@ -16,8 +17,9 @@ function init() {
   for (let i = 0; i < dishes.length; i++) {
     getTemplateMainDishes(i);
   }
+  loadFromLocalStorage();
   renderCart();
-  getTemplateCartPlaceholder();
+  renderCartDishesList();
 }
 
 function renderCart() {
@@ -35,6 +37,7 @@ function renderCart() {
   document.getElementById(
     "smallCartresultSum"
   ).innerHTML = `${cart[0].resultSum} €`;
+  saveToLocalStorage();
 }
 
 function renderCartDishesList() {
@@ -144,4 +147,26 @@ function resultSumCalculation() {
   )
     .toFixed(2)
     .replace(".", ",");
+}
+
+function toOrder() {
+  cart[0].meal = [];
+  cart[0].price = [];
+  cart[0].mealAmount = [];
+  cart[0].amountSum = 0;
+  cart[0].resultSum = 0;
+  renderCart();
+  renderCartDishesList();
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function loadFromLocalStorage() {
+  cartLocalStorage = localStorage.getItem("cart");
+
+  if (cartLocalStorage != null) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+  }
 }
