@@ -152,18 +152,22 @@ function resultSumCalculation() {
 
 function toOrder() {
   siteChange();
-  cart[0].meal = [];
-  cart[0].price = [];
-  cart[0].mealAmount = [];
-  cart[0].amountSum = 0;
-  cart[0].resultSum = 0;
-  saveToLocalStorage();
+  clearCart();
 }
 
 function siteChange() {
   if (cart[0].meal.length > 0) {
     window.location.href = "./order-confirmed.html";
   }
+}
+
+function clearCart() {
+  cart[0].meal = [];
+  cart[0].price = [];
+  cart[0].mealAmount = [];
+  cart[0].amountSum = 0;
+  cart[0].resultSum = 0;
+  saveToLocalStorage();
 }
 
 function saveToLocalStorage() {
