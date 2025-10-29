@@ -213,15 +213,38 @@ dialog::backdrop {
     color: black;
     cursor: pointer;
   }
+
+  .cartAddDishesNav {
+    font-size: 24px;
+    gap: 60px;
+  }
+
+  h5 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 500px) {
+  .cartAddDishesNav {
+    font-size: 20px;
+    gap: 40px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
   .smallCartsumList li {
     gap: 60px;
   }
 }
 
 @media (max-width: 400px) {
+  .cartAddDishesNav {
+    font-size: 18px;
+    gap: 10px;
+  }
+
   .smallCartsumList li {
     gap: 20px;
     font-size: 18px;
