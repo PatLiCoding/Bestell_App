@@ -224,5 +224,6 @@ dialog::backdrop {
 @media (max-width: 400px) {
   .smallCartsumList li {
     gap: 20px;
+    font-size: 18px;
   }
 }
