@@ -105,14 +105,11 @@ function addDishesToCart(i) {
     cart[0].meal.push(dishes[i].name);
     cart[0].price.push(dishes[i].dishesPrice);
     cart[0].mealAmount.push(1);
+    cart[0].mealAmounSum.push(dishes[i].dishesPrice);
+    renderCartDishesList();
   } else {
-    cart[0].mealAmount[menuIndex]++;
-    cart[0].mealAmounSum[menuIndex] =
-      Number(cart[0].mealAmounSum[menuIndex]) +
-      Number(cart[0].price[menuIndex]);
+    setAddCart(menuIndex);
   }
-  console.log(cart[0]);
-  renderCartDishesList();
 }
 
 function setAddCart(i) {
