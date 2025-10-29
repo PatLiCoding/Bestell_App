@@ -7,6 +7,7 @@ let cart = [
     meal: [],
     price: [],
     mealAmount: [],
+    mealAmounSum: [],
     amountSum: 0,
     deliveryCosts: 5.0,
     resultSum: 0,
@@ -17,7 +18,7 @@ function init() {
   for (let i = 0; i < dishes.length; i++) {
     getTemplateMainDishes(i);
   }
-  loadFromLocalStorage();
+  // loadFromLocalStorage();
   renderCart();
   renderCartDishesList();
 }
@@ -37,7 +38,7 @@ function renderCart() {
   document.getElementById(
     "smallCartresultSum"
   ).innerHTML = `${cart[0].resultSum} €`;
-  saveToLocalStorage();
+  // saveToLocalStorage();
 }
 
 function renderCartDishesList() {
@@ -98,10 +99,6 @@ function addDishesToCart(i) {
   bigCartPlaceholder.innerHTML = "";
   smallCartPlaceholder.innerHTML = "";
 
-  setAddCart(i);
-}
-
-function setAddCart(i) {
   let menue = dishes[i].name;
   let menuIndex = getMenuIndex(menue);
   if (menuIndex === -1) {
@@ -109,9 +106,19 @@ function setAddCart(i) {
     cart[0].price.push(dishes[i].dishesPrice);
     cart[0].mealAmount.push(1);
   } else {
-    cart[0].mealAmount[i]++;
-    cart[0].price[i] = cart[0].price[i] + dishes[menuIndex].dishesPrice;
+    cart[0].mealAmount[menuIndex]++;
+    cart[0].mealAmounSum[menuIndex] =
+      Number(cart[0].mealAmounSum[menuIndex]) +
+      Number(cart[0].price[menuIndex]);
   }
+  console.log(cart[0]);
+  renderCartDishesList();
+}
+
+function setAddCart(i) {
+  cart[0].mealAmount[i]++;
+  cart[0].mealAmounSum[i] =
+    Number(cart[0].mealAmounSum[i]) + Number(cart[0].price[i]);
   renderCartDishesList();
 }
 

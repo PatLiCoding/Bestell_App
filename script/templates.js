@@ -53,7 +53,7 @@ function getTemplateBigCart(i) {
             onclick="setOneRemoveCart(${i})"
             />
         </div>
-        <span>${cart[0].price[i].toFixed(2).replace(".", ",")} €</span>
+        <span>${cart[0].mealAmounSum[i]} €</span>
         <img
             class="cartBtn"
             src="./assets/icon/delete.png"
@@ -84,7 +84,7 @@ function getTemplateSmallCart(i) {
             onclick="setOneRemoveCart(${i})"
             />
         </div>
-        <span>${cart[0].price[i].toFixed(2).replace(".", ",")} €</span>
+        <span>${cart[0].price[i]} €</span>
         <img
             class="cartBtn"
             src="./assets/icon/delete.png"
