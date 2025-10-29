@@ -40,6 +40,14 @@ h1 {
   font-family: "Raleway", Arial;
 }
 
+h2 {
+  font-family: "Raleway", Arial;
+}
+
+h3 {
+  font-family: "Raleway", Arial;
+}
+
 h2:hover {
   cursor: default;
 }

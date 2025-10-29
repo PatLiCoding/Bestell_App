@@ -33,6 +33,10 @@ main {
   padding-top: 16px;
 }
 
+h1 {
+  padding-left: 16px;
+}
+
 .headlineImage {
   border-radius: 50px;
   border: 4px solid white;
@@ -47,6 +51,7 @@ main {
 .valuation {
   color: #995500;
   padding-bottom: 24px;
+  padding-left: 16px;
 }
 
 .dishesCategories {
@@ -166,6 +171,10 @@ main {
 
   h1 {
     margin-top: 60px;
+    text-align: center;
+  }
+  .valuation {
+    text-align: center;
   }
 }
 

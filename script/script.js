@@ -1,6 +1,10 @@
 const dialogRef = document.getElementById("dia");
 let smallCartPlaceholder = document.getElementById("smallCartPlaceholder");
 let bigCartPlaceholder = document.getElementById("bigCartPlaceholder");
+let bigCartamountSumRef = document.getElementById("bigCartamountSum");
+let bigCartresultSumRef = document.getElementById("bigCartresultSum");
+let smallCartamountSumRef = document.getElementById("smallCartamountSum");
+let smallCartresultSumRef = document.getElementById("smallCartresultSum");
 let cartLocalStorage = [];
 let cart = [
   {
@@ -26,18 +30,10 @@ function init() {
 function renderCart() {
   amountSumCalculation();
   resultSumCalculation();
-  document.getElementById(
-    "bigCartamountSum"
-  ).innerHTML = `${cart[0].amountSum} €`;
-  document.getElementById(
-    "bigCartresultSum"
-  ).innerHTML = `${cart[0].resultSum} €`;
-  document.getElementById(
-    "smallCartamountSum"
-  ).innerHTML = `${cart[0].amountSum} €`;
-  document.getElementById(
-    "smallCartresultSum"
-  ).innerHTML = `${cart[0].resultSum} €`;
+  bigCartamountSumRef.innerHTML = `${cart[0].amountSum} €`;
+  bigCartresultSumRef.innerHTML = `${cart[0].resultSum} €`;
+  smallCartamountSumRef.innerHTML = `${cart[0].amountSum} €`;
+  smallCartresultSumRef.innerHTML = `${cart[0].resultSum} €`;
   saveToLocalStorage();
 }
 
@@ -98,7 +94,6 @@ function getMenuIndex(menu) {
 function addDishesToCart(i) {
   bigCartPlaceholder.innerHTML = "";
   smallCartPlaceholder.innerHTML = "";
-
   let menue = dishes[i].name;
   let menuIndex = getMenuIndex(menue);
   if (menuIndex === -1) {
