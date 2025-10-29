@@ -18,7 +18,7 @@ function init() {
   for (let i = 0; i < dishes.length; i++) {
     getTemplateMainDishes(i);
   }
-  // loadFromLocalStorage();
+  loadFromLocalStorage();
   renderCart();
   renderCartDishesList();
 }
@@ -38,7 +38,7 @@ function renderCart() {
   document.getElementById(
     "smallCartresultSum"
   ).innerHTML = `${cart[0].resultSum} €`;
-  // saveToLocalStorage();
+  saveToLocalStorage();
 }
 
 function renderCartDishesList() {
