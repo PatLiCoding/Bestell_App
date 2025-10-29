@@ -1,0 +1,48 @@
+.mainMaxWidht {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: rgb(245, 247, 248);
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.backBtn {
+  background-color: orange;
+  padding: 8px 24px;
+  border-radius: 25px;
+  width: 100%;
+  transition: all 125ms ease-in;
+}
+
+.backBtn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 166, 0, 0.4);
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+    text-align: center;
+    padding-right: 16px;
+    padding-right: 16px;
+  }
+}

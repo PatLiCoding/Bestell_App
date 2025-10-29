@@ -156,8 +156,7 @@ function toOrder() {
   cart[0].mealAmount = [];
   cart[0].amountSum = 0;
   cart[0].resultSum = 0;
-  renderCart();
-  renderCartDishesList();
+  window.location.href = "./order-confirmed.html";
 }
 
 function saveToLocalStorage() {
