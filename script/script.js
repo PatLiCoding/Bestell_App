@@ -122,7 +122,8 @@ function setAddCart(i) {
 function setOneRemoveCart(i) {
   if (cart[0].mealAmount[i] > 0) {
     cart[0].mealAmount[i]--;
-    cart[0].price[i] = cart[0].price[i] - dishes[i].dishesPrice;
+    cart[0].mealAmounSum[i] =
+      Number(cart[0].mealAmounSum[i]) - Number(cart[0].price[i]);
     renderCartDishesList();
   }
   if (cart[0].mealAmount[i] == 0) {
@@ -134,13 +135,14 @@ function setRemoveDishesFromCart(i) {
   cart[0].meal.splice(i, 1);
   cart[0].price.splice(i, 1);
   cart[0].mealAmount.splice(i, 1);
+  cart[0].mealAmounSum.splice(i, 1);
   renderCartDishesList();
 }
 
 function amountSumCalculation() {
   let sum = 0;
   for (let i = 0; i < cart[0].price.length; i++) {
-    sum += cart[0].price[i];
+    sum += cart[0].mealAmounSum[i];
   }
   cart[0].amountSum = sum.toFixed(2).replace(".", ",");
 }
