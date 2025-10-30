@@ -13,6 +13,9 @@
   top: 0;
   padding-top: 40px;
   width: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .cartHeadline {
@@ -115,6 +118,7 @@ dialog.opened {
   justify-content: space-between;
   padding: 16px 8px;
   border-radius: 15px;
+  scrollbar-width: none;
 }
 
 dialog.opened::backdrop {

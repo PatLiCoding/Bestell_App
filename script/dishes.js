@@ -191,6 +191,6 @@ let dishes = [
   {
     name: "Mango Sticky Rice",
     ingredient: ["Klebreis", "Kokosmilch", "Mango", "Zucker", "Sesam"],
-    dishesPrices: 6.5,
+    dishesPrice: 6.5,
   },
 ];
