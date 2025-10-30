@@ -1,7 +1,5 @@
 function getTemplateMainDishes(i) {
-  document.getElementById("mainDishesContainer").innerHTML +=
-    /*HTML*/
-    `<div class="dishesBox">
+  return /*HTML*/ `<div class="dishesBox">
                 <img
                   class="dishesBoxAddBtn"
                   src="./assets/icon/add.png"
@@ -11,32 +9,28 @@ function getTemplateMainDishes(i) {
                 <h3 class="dishesBoxHeadline">${dishes[i].name}</h3>
                 <p>${dishes[i].ingredient.join(", ")}
                 </p>
-                <p class="dishesBoxPrice">${dishes[i].dishesPrice
+                <p class="dishesBoxPrice">${Number(dishes[i].dishesPrice)
                   .toFixed(2)
                   .replace(".", ",")}
                  €</p>
               </div>`;
 }
 
-function getTemplateCartPlaceholder() {
-  document.getElementById(
-    "smallCartAddDishesContainer"
-  ).innerHTML += /*HTML*/ `                
+function getTemplateSmallCartPlaceholder() {
+  return /*HTML*/ `                
               <p class="cartPlaceholderText">
                 Noch wurde nichts dem Warenkorb hinzugefügt.
               </p>`;
-  document.getElementById(
-    "bigCartAddDishesContainer"
-  ).innerHTML += /*HTML*/ `                
+}
+function getTemplateBigCartPlaceholder() {
+  return /*HTML*/ `                
               <p class="cartPlaceholderText">
                 Noch wurde nichts dem Warenkorb hinzugefügt.
               </p>`;
 }
 
 function getTemplateBigCart(i) {
-  document.getElementById("bigCartAddDishesContainer").innerHTML +=
-    /*HTML*/
-    `<h5>${cart[0].meal[i]}</h5>
+  return /*HTML*/ `<h5>${cart[0].meal[i]}</h5>
         <div class="cartAddDishesNav">
         <div class="cartAddRemoveSection">
             <img
@@ -67,9 +61,7 @@ function getTemplateBigCart(i) {
 }
 
 function getTemplateSmallCart(i) {
-  document.getElementById("smallCartAddDishesContainer").innerHTML +=
-    /*HTML*/
-    `<h5>${cart[0].meal[i]}</h5>
+  return /*HTML*/ `<h5>${cart[0].meal[i]}</h5>
         <div class="cartAddDishesNav">
         <div class="cartAddRemoveSection">
             <img

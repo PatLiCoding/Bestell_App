@@ -1,4 +1,4 @@
-const dialogRef = document.getElementById("dia");
+const dialogRef = document.getElementById("dialogSmallCart");
 let smallCartPlaceholder = document.getElementById("smallCartPlaceholder");
 let bigCartPlaceholder = document.getElementById("bigCartPlaceholder");
 let bigCartamountSumRef = document.getElementById("bigCartamountSum");
@@ -20,7 +20,8 @@ let cart = [
 
 function init() {
   for (let i = 0; i < dishes.length; i++) {
-    getTemplateMainDishes(i);
+    document.getElementById("mainDishesContainer").innerHTML +=
+      getTemplateMainDishes(i);
   }
   loadFromLocalStorage();
   renderCart();
@@ -42,11 +43,16 @@ function renderCartDishesList() {
   document.getElementById("smallCartAddDishesContainer").innerHTML = "";
 
   if (cart[0].meal.length === 0) {
-    getTemplateCartPlaceholder();
+    document.getElementById("bigCartAddDishesContainer").innerHTML +=
+      getTemplateBigCartPlaceholder();
+    document.getElementById("smallCartAddDishesContainer").innerHTML +=
+      getTemplateSmallCartPlaceholder();
   } else {
     for (let i = 0; i < cart[0].meal.length; i++) {
-      getTemplateBigCart(i);
-      getTemplateSmallCart(i);
+      document.getElementById("bigCartAddDishesContainer").innerHTML +=
+        getTemplateBigCart(i);
+      document.getElementById("smallCartAddDishesContainer").innerHTML +=
+        getTemplateSmallCart(i);
     }
   }
   renderCart();
@@ -151,11 +157,11 @@ function resultSumCalculation() {
 }
 
 function toOrder() {
-  siteChange();
+  orderComfirmed();
   clearCart();
 }
 
-function siteChange() {
+function orderComfirmed() {
   if (cart[0].meal.length > 0) {
     window.location.href = "./order-confirmed.html";
   }
