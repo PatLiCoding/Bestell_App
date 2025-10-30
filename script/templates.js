@@ -23,13 +23,13 @@ function getTemplateCartPlaceholder() {
     "smallCartAddDishesContainer"
   ).innerHTML += /*HTML*/ `                
               <p class="cartPlaceholderText">
-                Noch wurde nichts den Warenkorb hinzugefügt.
+                Noch wurde nichts dem Warenkorb hinzugefügt.
               </p>`;
   document.getElementById(
     "bigCartAddDishesContainer"
   ).innerHTML += /*HTML*/ `                
               <p class="cartPlaceholderText">
-                Noch wurde nichts den Warenkorb hinzugefügt.
+                Noch wurde nichts dem Warenkorb hinzugefügt.
               </p>`;
 }
 
